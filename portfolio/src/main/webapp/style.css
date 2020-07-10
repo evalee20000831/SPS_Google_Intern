@@ -4,6 +4,23 @@
   width: 650px;
 }
 
-#greeting-container {
+#quote-container {
   margin-top: 20px;
+}
+.button {
+    background-color: rgb(76, 175, 167);
+    border: none;
+    color:rgb(1, 109, 119)e;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+body {
+  color: aliceblue; 
+  background-color:rgb(0, 0, 0);
 }
