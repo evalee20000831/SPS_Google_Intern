@@ -3,15 +3,31 @@
   margin-right: auto;
   width: 650px;
 }
+.hero-image{
+  background: url(eva-images/queens.jpg) no-repeat center; 
+  background-size: cover;
+  height: 700px;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:rgb(255, 255, 255);
+  font-family: "Lucida Console", Courier, monospace;
+}
 
 #quote-container {
   margin-top: 20px;
 }
 .button {
-    background-color: rgb(76, 175, 167);
+    background-color: rgb(0, 0, 0);
     border: none;
-    color:rgb(1, 109, 119)e;
-    padding: 15px 32px;
+    color:rgb(255, 241, 40);
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -19,8 +35,39 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+/* button used for github link */
+.button1:hover {
+  background-color:rgb(255, 241, 40);
+  color:rgb(0, 0, 0);
+}
+/* button used for facebook link */
+.button2 {
+  background-color: rgb(43, 90, 219); 
+  color: rgb(255, 255, 255); 
+}
+
+.button2:hover {
+  background-color:rgb(255, 255, 255);
+  color:rgb(43, 90, 219);
+}
+/* button used for cat lover and recent event link */
+.button3 {
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  padding: 15px 25px;
+  border: 2px solid rgb(255, 255, 255);
+  transition-duration: 0.4s;
+}
+.button3:hover {
+  background-color: rgb(255, 255, 255); 
+  color:rgb(0, 0, 0); 
+}
 
 body {
   color: aliceblue; 
   background-color:rgb(0, 0, 0);
+}
+body.second {
+  color: rgb(0, 0, 0); 
+  background-color:rgb(251, 255, 6);
 }
