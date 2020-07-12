@@ -5,8 +5,12 @@
 }
 
 #secondBack {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
   color: rgb(0, 0, 0); 
-  background-color:rgb(251, 255, 6);
+  background-color:rgba(255, 255, 255, 0.828);
+  width: 850px;
 }
 
 #thirdBack{
@@ -22,7 +26,6 @@
   position: relative;
   /* Add the blur effect */
   filter: blur(2px);
-  -webkit-filter: blur(2px);
 }
 
 .intro-text {
@@ -60,6 +63,30 @@
   font-family: "Lucida Console", Courier, monospace;
 }
 
+.education-image{
+  background: url(eva-images/satellite.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.education-text {
+  /* Fallback color */
+  background-color: rgba(0,0,0, 0.3); 
+  border: 3px solid #f1f1f1;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 80%; 
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color:rgb(255, 255, 255);
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+
 /* middle part of main page */
 * {
   box-sizing: border-box;
@@ -75,6 +102,17 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.column.left {
+  float: left;
+  width: 80%;
+  
+}
+.column.right {
+  float: left;
+  width: 20%;
+  
 }
 
 #quote-container {
@@ -120,10 +158,42 @@
   color:rgb(0, 0, 0); 
 }
 
+/* index.html */
 p.a { 
   font-size: 20px;
   text-align: justify;
   text-justify: inter-word;
+}
+
+/* education.html */
+/* class b for title */
+p.b { 
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+/* class b for location */
+p.c { 
+  font-size: 17px;
+  text-indent: 35px;
+}
+
+/* class e for section title */
+p.e { 
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 24px;
+  color: rgb(3, 155, 79);
+}
+
+
+ul.a { 
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 20px;
+  
 }
 
 body {
@@ -131,7 +201,3 @@ body {
   background-color:rgb(0, 0, 0);
 }
 
-body.two{
-  color: rgb(255, 255, 255); 
-  background-color:rgb(19, 79, 153);
-}
