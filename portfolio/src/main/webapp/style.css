@@ -1,10 +1,10 @@
-#content {
+#first-back {
   margin-left: auto;
   margin-right: auto;
   width: 650px;
 }
 
-#secondBack {
+#second-back {
   margin-left: auto;
   margin-right: auto;
   margin-top: 25%;
@@ -13,7 +13,7 @@
   width: 850px;
 }
 
-#thirdBack{
+#third-back{
   color: rgb(0, 0, 0); 
   background-color:rgb(255, 255, 255);
   width: 800px;
@@ -29,7 +29,6 @@
 }
 
 .intro-text {
-  /* Fallback color */
   background-color: rgba(0,0,0, 0.3); 
   border: 3px solid #f1f1f1;
   text-align: center;
@@ -51,7 +50,6 @@
 }
 
 .quote-text {
-  /* Fallback color */
   background-color: rgba(0,0,0, 0.3); 
   text-align: center;
   position: relative;
@@ -72,7 +70,6 @@
 }
 
 .education-text {
-  /* Fallback color */
   background-color: rgba(0,0,0, 0.3); 
   border: 3px solid #f1f1f1;
   text-align: center;
@@ -86,8 +83,7 @@
   font-family: "Lucida Console", Courier, monospace;
 }
 
-
-/* middle part of main page */
+/* middle part of index.html page */
 * {
   box-sizing: border-box;
 }
@@ -97,7 +93,7 @@
   width: 50%;
   padding: 15px;
 }
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
@@ -115,85 +111,80 @@
   
 }
 
-#quote-container {
+#quotes-container {
   margin-top: 20px;
 }
+
 .button {
-    background-color: rgb(0, 0, 0);
-    border: none;
-    color:rgb(255, 241, 40);
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color:rgb(255, 241, 40);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-/* button used for github link */
-.button1:hover {
+.github-button:hover {
   background-color:rgb(255, 241, 40);
-  color:rgb(0, 0, 0);
+  color:rgb(24, 21, 21);
 }
-/* button used for facebook link */
-.button2 {
+
+.fb-button {
   background-color: rgb(43, 90, 219); 
   color: rgb(255, 255, 255); 
 }
-
-.button2:hover {
+.fb-button:hover {
   background-color:rgb(255, 255, 255);
   color:rgb(43, 90, 219);
 }
-/* button used for cat lover and recent event link */
-.button3 {
+
+.link-button {
   background-color: rgb(0, 0, 0); 
   color: rgb(255, 255, 255); 
   padding: 15px 25px;
   border: 2px solid rgb(255, 255, 255);
   transition-duration: 0.4s;
 }
-.button3:hover {
+.link-button:hover {
   background-color: rgb(255, 255, 255); 
   color:rgb(0, 0, 0); 
 }
 
+/* paragraph */ 
 /* index.html */
-p.a { 
+p.index { 
   font-size: 20px;
   text-align: justify;
   text-justify: inter-word;
 }
 
 /* education.html */
-/* class b for title */
-p.b { 
+p.title { 
   margin-right: 30px;
   margin-left: 30px;
   font-size: 20px;
 }
 
-/* class b for location */
-p.c { 
+p.location { 
   font-size: 17px;
   text-indent: 35px;
 }
 
-/* class e for section title */
-p.e { 
+p.section-title { 
   margin-right: 30px;
   margin-left: 30px;
   font-size: 24px;
   color: rgb(3, 155, 79);
 }
 
-
-ul.a { 
+ul.course { 
   font-size: 20px;
   text-align: justify;
   text-justify: inter-word;
   text-indent: 20px;
-  
 }
 
 body {
