@@ -84,7 +84,7 @@
 }
 
 /* middle part of index.html page */
-* {
+*{
   box-sizing: border-box;
 }
 
@@ -103,15 +103,18 @@
 .column.left {
   float: left;
   width: 80%;
-  
 }
+
 .column.right {
   float: left;
   width: 20%;
-  
 }
 
 #quotes-container {
+  margin-top: 20px;
+}
+
+#message-container {
   margin-top: 20px;
 }
 
@@ -127,6 +130,7 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+
 .github-button:hover {
   background-color:rgb(255, 241, 40);
   color:rgb(24, 21, 21);
@@ -136,6 +140,7 @@
   background-color: rgb(43, 90, 219); 
   color: rgb(255, 255, 255); 
 }
+
 .fb-button:hover {
   background-color:rgb(255, 255, 255);
   color:rgb(43, 90, 219);
@@ -148,6 +153,7 @@
   border: 2px solid rgb(255, 255, 255);
   transition-duration: 0.4s;
 }
+
 .link-button:hover {
   background-color: rgb(255, 255, 255); 
   color:rgb(0, 0, 0); 

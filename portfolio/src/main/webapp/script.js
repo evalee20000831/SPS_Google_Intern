@@ -19,12 +19,12 @@ function addRandomQuote() {
   // const variable cannot be reassigned. 
   const quote1 = "An earnest failure has meaning.";
   const quote2 = "Do what you can until you learn what you need. "
-                     + "If you’re going to try something, you may as well" 
-                     + " aim for the top.";
+      + "If you’re going to try something, you may as well" 
+      + " aim for the top.";
   const quote3 = "A leader must do more than lead.";
   const quote4 = "When in doubt, don't worry about what's right. "
-                    + "Your heard knows what's right, Choose the answer "
-                    + "that will be fun.";
+      + "Your heard knows what's right, Choose the answer "
+      + "that will be fun.";
   const quotes = [quote1, quote2, quote3, quote4];
 
   // Pick a random quotes.
@@ -34,3 +34,11 @@ function addRandomQuote() {
   const quoteContainer = document.getElementById('quotes-container');
   quoteContainer.innerText = quote;
 }
+
+function getMessageUsingArrowFunctions() {
+  fetch('/data').then(response => response.text()).then((message) => {
+    document.getElementById('message-container').innerText = message;
+  });
+}
+
+
