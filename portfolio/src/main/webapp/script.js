@@ -35,10 +35,30 @@ function addRandomQuote() {
   quoteContainer.innerText = quote;
 }
 
+// fetech 
 function getMessageUsingArrowFunctions() {
-  fetch('/data').then(response => response.text()).then((message) => {
-    document.getElementById('message-container').innerText = message;
+  /**console.log(comment[0]);
+    console.log(comment[1]);
+    console.log(comment[2]); */ 
+  
+  //document.getElementById('comment-container').innerText = comment;
+  fetch('/data').then(response => response.json()).then((comment) => {
+    //document.getElementById('comment-container').innerText = comment;
+    const commentEntry = document.getElementById('comment-container');
+    commentEntry.innerHTML = '';
+    // Expect: Hello, Worlrd, Love 
+    commentEntry.appendChild(createListElement(comment[0]));
+    commentEntry.appendChild(createListElement(comment[1]));
+    commentEntry.appendChild(createListElement(comment[2]));
+    
   });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
 
 

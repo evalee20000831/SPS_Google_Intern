@@ -19,6 +19,16 @@
   width: 800px;
 }
 
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+#comment-container {
+  margin-top: 20px;
+}
+
 .intro-image{
   background: url(eva-images/queens.jpg) no-repeat center; 
   background-size: cover;
@@ -111,10 +121,6 @@
 }
 
 #quotes-container {
-  margin-top: 20px;
-}
-
-#message-container {
   margin-top: 20px;
 }
 
