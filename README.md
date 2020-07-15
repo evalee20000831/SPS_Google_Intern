@@ -1,5 +1,8 @@
-# Google Software Product Sprint
+# This repo contains Eva's portfolio and SPS projects. 
 
+I am Eva Lee (Jung Ho Lee) and I love cat. 
+
+------------------------------------------------------------
 This repo contains the projects you'll work on throughout SPS.
 
 To get started:
