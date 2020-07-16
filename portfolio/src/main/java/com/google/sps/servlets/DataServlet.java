@@ -27,20 +27,20 @@ import com.google.gson.Gson;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
+  private ArrayList<String> comments = new ArrayList<String>();
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     /*Delete: 
     String message = messages.get((int) (Math.random() * messages.size())); 
     response.setContentType("text/html;");
     response.getWriter().println(message);  
-    */ 
-
-    // initialize 
     ArrayList<String> comments = new ArrayList<String>();
     comments.add("Hello"); 
     comments.add("World"); 
     comments.add("Love"); 
-    
+    */ 
+
     // convert comments to json string 
     // param: ArrayList; return string 
     String json = convertToJsonUsingGson(comments); 
@@ -55,4 +55,25 @@ public class DataServlet extends HttpServlet {
     String json = gson.toJson(comments);
     return json;
   }
+
+  
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    // Get the input from the form.
+    String text = getParameter(request, "text-input", ""); // request, name, and defaultValue
+    comments.add(text); // text add into comments arraylist 
+
+    // Respond with the result.
+    response.sendRedirect("/index.html"); // comment on the same page 
+    response.getWriter().println(text);
+  }
+
+  private String getParameter(HttpServletRequest request, String name, String defaultValue) {
+    String value = request.getParameter(name);
+    if (value == null) {
+      return defaultValue;
+    }
+    return value;
+  }
+
 }

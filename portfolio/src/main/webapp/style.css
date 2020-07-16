@@ -35,12 +35,13 @@
   height: 700px;
   position: relative;
   /* Add the blur effect */
-  filter: blur(2px);
+  filter: blur(0px);
 }
 
 .intro-text {
   background-color: rgba(0,0,0, 0.3); 
   border: 3px solid #f1f1f1;
+  filter: blur(0px);
   text-align: center;
   position: absolute;
   top: 50%;
@@ -70,6 +71,22 @@
   color:rgb(255, 255, 255);
   font-family: "Lucida Console", Courier, monospace;
 }
+
+.comment-image{
+  background: url(eva-images/comment.jpg) no-repeat center; 
+  background-size: cover;
+  height: 800px;
+}
+
+.comment-text {
+  position: relative;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
 
 .education-image{
   background: url(eva-images/satellite.jpg);

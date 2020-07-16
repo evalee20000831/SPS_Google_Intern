@@ -7,11 +7,12 @@
     <script src="script.js"></script>
   </head>
 
-  <body>
+  <body onload="getMessageUsingArrowFunctions()">
     <!-- Intro image --> 
-    <div class="intro-image"></div>
-    <div class="intro-text">
-      <h1 style="font-size:70px">Eva's Portfolio</h1>
+    <div class="intro-image">
+      <div class="intro-text">
+        <h1 style="font-size:70px">Eva's Portfolio</h1>
+      </div>
     </div>
 
     <div class="row">
@@ -52,7 +53,7 @@
       </div>
     </div>   
 
-    <div class="quote-image"></div>
+    <div class="quote-image">
       <div class="quote-text">
         <!-- Random Quotes --> 
         <div id="first-back">
@@ -67,13 +68,24 @@
             <i>Space Brothers</i>:</p>
           <button onclick="addRandomQuote()">Quote</button>
           <div id="quotes-container"></div>
-          <!-- Fetch --> 
-          <p>Fetch</p>
-          <div id="comment-container"></div>
-          <button onclick="getMessageUsingArrowFunctions()">Fetch data</button>
+          <!-- Fetch 
+            <button onclick="getMessageUsingArrowFunctions()">Fetch data</button>
+            <div id="comment-container"></div>
+          --> 
           
         </div>
       </div>
+    </div>
+
+    <div class="comment-image">
+      <div class="comment-text">
+        <p>Fetch</p>
+        <form action="/data" method="POST">
+          <textarea name="text-input"></textarea> 
+          <input type="submit"/>
+          <div id="comment-container"></div>
+        </form>
+    </div>
     </div>
   </body>    
 </html>
