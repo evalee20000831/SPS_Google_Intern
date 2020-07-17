@@ -53,9 +53,9 @@
       </div>
     </div>   
 
+    <!-- Random Quotes -->
     <div class="quote-image">
       <div class="quote-text">
-        <!-- Random Quotes --> 
         <div id="first-back">
           <h4>Quotes✨</h4>
           <p>Anime <i>Space Brothers</i> is one of my favorite anime. I watched
@@ -68,24 +68,21 @@
             <i>Space Brothers</i>:</p>
           <button onclick="addRandomQuote()">Quote</button>
           <div id="quotes-container"></div>
-          <!-- Fetch 
-            <button onclick="getMessageUsingArrowFunctions()">Fetch data</button>
-            <div id="comment-container"></div>
-          --> 
-          
         </div>
       </div>
     </div>
 
+    <!-- Comment section -->
     <div class="comment-image">
       <div class="comment-text">
-        <p>Fetch</p>
+        <p>Leave a message!</p>
         <form action="/data" method="POST">
-          <textarea name="text-input"></textarea> 
+          <textarea name="name-input">name...</textarea>
+          <textarea name="text-input">message...</textarea> 
           <input type="submit"/>
           <div id="comment-container"></div>
         </form>
-    </div>
+      </div>
     </div>
   </body>    
 </html>

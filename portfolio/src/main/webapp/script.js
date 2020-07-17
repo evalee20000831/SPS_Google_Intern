@@ -35,25 +35,15 @@ function addRandomQuote() {
   quoteContainer.innerText = quote;
 }
 
-// fetech 
+/**
+ * fetch for comment section  
+ */
 function getMessageUsingArrowFunctions() {
-  /**console.log(comment[0]);
-    console.log(comment[1]);
-    console.log(comment[2]); 
-
-    // Expect: Hello, Worlrd, Love 
-    commentEntry.appendChild(createListElement(comment[0]));
-    commentEntry.appendChild(createListElement(comment[1]));
-    commentEntry.appendChild(createListElement(comment[2]));
-    //document.getElementById('comment-container').innerText = comment;
-    */ 
-  
-  
   fetch('/data').then(response => response.json()).then((comment) => {
     const commentEntry = document.getElementById('comment-container');
     commentEntry.innerHTML = '';
     for (let i in comment){
-        commentEntry.appendChild(createListElement(comment[i])); 
+      commentEntry.appendChild(createListElement(comment[i].name + " commented " + comment[i].message)); // name then message 
     }
   });
 }
