@@ -39,24 +39,27 @@ public class DataServlet extends HttpServlet {
   *
   */
   private class CommentStore {
-  private String name;
-  private String message; 
-  private long timestamp;
+    private String name;
+    private String message; 
+    private long timestamp;
   
-  CommentStore(String name, String message, long timestamp){
-    this.name = name;
-    this.message = message;
-    this.timestamp = timestamp;
+    CommentStore(String name, String message, long timestamp){
+      this.name = name;
+      this.message = message;
+      this.timestamp = timestamp;
     }
   }
-  
+  // datastore can be accessed through the entire class. (global variable) 
+  private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService(); 
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException { 
+    
     List<CommentStore> commentData = new ArrayList<>();
 
     // a query is used to extract data from the database 
     Query query = new Query("comment").addSort("timestamp", SortDirection.DESCENDING);
-    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    // datastore is a global variable. 
     PreparedQuery results = datastore.prepare(query);
 
     for (Entity entity : results.asIterable()) {
@@ -91,8 +94,7 @@ public class DataServlet extends HttpServlet {
     taskEntity.setProperty("name", name);
     taskEntity.setProperty("message", message);
     taskEntity.setProperty("timestamp", timestamp);
-    
-    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    // datastore is a global variable 
     datastore.put(taskEntity);
 
     // Respond with the result.
