@@ -57,9 +57,33 @@ function createListElement(text) {
 
 /** Create a map */
 function createMap() {
+  // center at Taiwan presidential office building 
   const map = new google.maps.Map(
       document.getElementById('map'),
-      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+      {center: {lat: 25.040, lng: 121.512}, zoom: 12
+      });
+  
+  // markers for my fav Taipei spots 
+  // location#1 Elephant Mountain Hiking Trail
+  const spotOne = new google.maps.Marker({
+    position: {lat: 25.027, lng: 121.571},
+    map: map,
+    title: 'Elephant Mountain Hiking Trail'
+  });
+  // location#2 Ximen Station 
+  const spotTwo = new google.maps.Marker({
+    position: {lat: 25.042, lng: 121.508},
+    map: map,
+    title: 'Ximen Station'
+  });
+  // location#3 Gongguan Night Market
+  const spotThree = new google.maps.Marker({
+    position: {lat: 25.014, lng: 121.535},
+    map: map,
+    title: 'Gongguan Night Market'
+  });
+
 }
+
 
 
