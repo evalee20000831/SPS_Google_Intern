@@ -83,7 +83,23 @@ function createMap() {
     title: 'Gongguan Night Market'
   });
 
+  // info windows for three locations 
+  infoWindow('Elephant Mountain Hiking Trail', spotOne); 
+  infoWindow('Ximen Station', spotTwo); 
+  infoWindow('Gongguan Night Market', spotThree); 
 }
+
+/** Prints out locations' info window */
+function infoWindow(contentInfo, location) {
+  var spotInfo =
+      new google.maps.InfoWindow({content: contentInfo});
+  // set the text color to black
+  // was originally light blue 
+  document.getElementById("map").style.color = "black";
+  spotInfo.open(map, location);
+}
+
+
 
 
 
