@@ -35,10 +35,71 @@ function addRandomQuote() {
   quoteContainer.innerText = quote;
 }
 
+/**
+ * fetch for comment section  
+ */
 function getMessageUsingArrowFunctions() {
-  fetch('/data').then(response => response.text()).then((message) => {
-    document.getElementById('message-container').innerText = message;
+  fetch('/data').then(response => response.json()).then((comment) => {
+    const commentEntry = document.getElementById('comment-container');
+    commentEntry.innerHTML = '';
+    for (let i in comment) {
+      commentEntry.appendChild(createListElement(comment[i].name + " commented " + comment[i].message)); // name then message 
+    }
   });
 }
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
+/** Creates a map */
+function createMap() {
+  // center at Taiwan presidential office building 
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 25.040, lng: 121.512}, zoom: 12
+      });
+  
+  // markers for my fav Taipei spots 
+  // location#1 Elephant Mountain Hiking Trail
+  const elephantMountainSpot = new google.maps.Marker({
+    position: {lat: 25.027, lng: 121.571},
+    map: map,
+    title: 'Elephant Mountain Hiking Trail'
+  });
+  // location#2 Ximen Station 
+  const ximenStationSpot = new google.maps.Marker({
+    position: {lat: 25.042, lng: 121.508},
+    map: map,
+    title: 'Ximen Station'
+  });
+  // location#3 Gongguan Night Market
+  const gongguanMarketSpot = new google.maps.Marker({
+    position: {lat: 25.014, lng: 121.535},
+    map: map,
+    title: 'Gongguan Night Market'
+  });
+
+  // info windows for three locations 
+  infoWindow('Elephant Mountain Hiking Trail', elephantMountainSpot); 
+  infoWindow('Ximen Station', ximenStationSpot); 
+  infoWindow('Gongguan Night Market', gongguanMarketSpot); 
+}
+
+/** Prints out locations' info window */
+function infoWindow(contentInfo, location) {
+  var spotInfo =
+      new google.maps.InfoWindow({content: contentInfo});
+  // set the text color to black
+  // was originally light blue 
+  document.getElementById("map").style.color = "black";
+  spotInfo.open(map, location);
+}
+
+
+
 
 

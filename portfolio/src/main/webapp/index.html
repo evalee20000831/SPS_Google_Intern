@@ -7,11 +7,12 @@
     <script src="script.js"></script>
   </head>
 
-  <body>
+  <body onload="getMessageUsingArrowFunctions()">
     <!-- Intro image --> 
-    <div class="intro-image"></div>
-    <div class="intro-text">
-      <h1 style="font-size:70px">Eva's Portfolio</h1>
+    <div class="intro-image">
+      <div class="intro-text">
+        <h1 style="font-size:70px">Eva's Portfolio</h1>
+      </div>
     </div>
 
     <div class="row">
@@ -48,13 +49,14 @@
             <a href="education.html" class="button link-button">#Education</a>
             <a href="catImages.html" class="button link-button">#Cat Lover</a>
             <a href="alishanImages.html" class="button link-button">#Recent Event</a>
+            <a href="maps.html" class="button link-button">#Go-to Places in Taipei</a>
         </div>
       </div>
     </div>   
 
-    <div class="quote-image"></div>
+    <!-- Random Quotes -->
+    <div class="quote-image">
       <div class="quote-text">
-        <!-- Random Quotes --> 
         <div id="first-back">
           <h4>Quotes✨</h4>
           <p>Anime <i>Space Brothers</i> is one of my favorite anime. I watched
@@ -67,12 +69,21 @@
             <i>Space Brothers</i>:</p>
           <button onclick="addRandomQuote()">Quote</button>
           <div id="quotes-container"></div>
-
-          <p>Fetch</p>
-          <button onclick="getMessageUsingArrowFunctions()">Fetch data</button>
-          <div id="message-container"></div>
         </div>
       </div>
     </div>
-  </body>
+
+    <!-- Comment section -->
+    <div class="comment-image">
+      <div class="comment-text">
+        <p>Leave a message!</p>
+        <form action="/data" method="POST">
+          <textarea name="name-input">name...</textarea>
+          <textarea name="text-input">message...</textarea> 
+          <input type="submit"/>
+          <div id="comment-container"></div>
+        </form>
+      </div>
+    </div>
+  </body>    
 </html>
