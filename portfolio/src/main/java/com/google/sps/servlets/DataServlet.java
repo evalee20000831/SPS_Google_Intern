@@ -35,22 +35,21 @@ import com.google.appengine.api.datastore.Query.SortDirection;
 /** Servlet that returns some example content and handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-  /** This class creates a storage for comments. 
-  *
-  */
+  /** Creates a storage for comments. */
   private class CommentStore {
     private String name;
     private String message; 
     private long timestamp;
   
-    CommentStore(String name, String message, long timestamp){
+    private CommentStore(String name, String message, long timestamp){
       this.name = name;
       this.message = message;
       this.timestamp = timestamp;
     }
   }
   // datastore can be accessed through the entire class. (global variable) 
-  private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService(); 
+  // static access and won't be re-assigned.
+  static final DatastoreService datastore = DatastoreServiceFactory.getDatastoreService(); 
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException { 
