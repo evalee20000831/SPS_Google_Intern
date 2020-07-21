@@ -42,7 +42,7 @@ function getMessageUsingArrowFunctions() {
   fetch('/data').then(response => response.json()).then((comment) => {
     const commentEntry = document.getElementById('comment-container');
     commentEntry.innerHTML = '';
-    for (let i in comment){
+    for (let i in comment) {
       commentEntry.appendChild(createListElement(comment[i].name + " commented " + comment[i].message)); // name then message 
     }
   });
@@ -55,7 +55,7 @@ function createListElement(text) {
   return liElement;
 }
 
-/** Create a map */
+/** Creates a map */
 function createMap() {
   // center at Taiwan presidential office building 
   const map = new google.maps.Map(
@@ -65,28 +65,28 @@ function createMap() {
   
   // markers for my fav Taipei spots 
   // location#1 Elephant Mountain Hiking Trail
-  const spotOne = new google.maps.Marker({
+  const elephantMountainSpot = new google.maps.Marker({
     position: {lat: 25.027, lng: 121.571},
     map: map,
     title: 'Elephant Mountain Hiking Trail'
   });
   // location#2 Ximen Station 
-  const spotTwo = new google.maps.Marker({
+  const ximenStationSpot = new google.maps.Marker({
     position: {lat: 25.042, lng: 121.508},
     map: map,
     title: 'Ximen Station'
   });
   // location#3 Gongguan Night Market
-  const spotThree = new google.maps.Marker({
+  const gongguanMarketSpot = new google.maps.Marker({
     position: {lat: 25.014, lng: 121.535},
     map: map,
     title: 'Gongguan Night Market'
   });
 
   // info windows for three locations 
-  infoWindow('Elephant Mountain Hiking Trail', spotOne); 
-  infoWindow('Ximen Station', spotTwo); 
-  infoWindow('Gongguan Night Market', spotThree); 
+  infoWindow('Elephant Mountain Hiking Trail', elephantMountainSpot); 
+  infoWindow('Ximen Station', ximenStationSpot); 
+  infoWindow('Gongguan Night Market', gongguanMarketSpot); 
 }
 
 /** Prints out locations' info window */
